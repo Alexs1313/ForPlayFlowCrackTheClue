@@ -12,6 +12,12 @@
 		33875CE18B7D4F1D30CB8E5E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D1CC6E6A2EC35F17006DA163 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CC6E692EC35F17006DA163 /* AVKit.framework */; };
+		D1CC6E6C2EC35F1E006DA163 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CC6E6B2EC35F1E006DA163 /* AudioToolbox.framework */; };
+		D1CC6E6E2EC35F24006DA163 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CC6E6D2EC35F24006DA163 /* AVFoundation.framework */; };
+		D1CC6E702EC39D5A006DA163 /* open-new-level-143027.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1CC6E6F2EC39D5A006DA163 /* open-new-level-143027.mp3 */; };
+		D1CC6E722EC39D6D006DA163 /* brass-fail-1-a-185074 (1).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1CC6E712EC39D6D006DA163 /* brass-fail-1-a-185074 (1).mp3 */; };
+		D1CC6E742EC39D73006DA163 /* fun-on-the-farm-377651.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1CC6E732EC39D73006DA163 /* fun-on-the-farm-377651.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ForPlayFlowCrackTheClue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ForPlayFlowCrackTheClue.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ForPlayFlowCrackTheClue/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ForPlayFlowCrackTheClue/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1CC6E692EC35F17006DA163 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		D1CC6E6B2EC35F1E006DA163 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D1CC6E6D2EC35F24006DA163 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D1CC6E6F2EC39D5A006DA163 /* open-new-level-143027.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "open-new-level-143027.mp3"; sourceTree = "<group>"; };
+		D1CC6E712EC39D6D006DA163 /* brass-fail-1-a-185074 (1).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "brass-fail-1-a-185074 (1).mp3"; sourceTree = "<group>"; };
+		D1CC6E732EC39D73006DA163 /* fun-on-the-farm-377651.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fun-on-the-farm-377651.mp3"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -32,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CC6E6E2EC35F24006DA163 /* AVFoundation.framework in Frameworks */,
+				D1CC6E6C2EC35F1E006DA163 /* AudioToolbox.framework in Frameworks */,
+				D1CC6E6A2EC35F17006DA163 /* AVKit.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-ForPlayFlowCrackTheClue.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +69,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1CC6E6D2EC35F24006DA163 /* AVFoundation.framework */,
+				D1CC6E6B2EC35F1E006DA163 /* AudioToolbox.framework */,
+				D1CC6E692EC35F17006DA163 /* AVKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-ForPlayFlowCrackTheClue.a */,
 			);
@@ -75,6 +93,9 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				D1CC6E6F2EC39D5A006DA163 /* open-new-level-143027.mp3 */,
+				D1CC6E712EC39D6D006DA163 /* brass-fail-1-a-185074 (1).mp3 */,
+				D1CC6E732EC39D73006DA163 /* fun-on-the-farm-377651.mp3 */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -158,9 +179,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CC6E722EC39D6D006DA163 /* brass-fail-1-a-185074 (1).mp3 in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				33875CE18B7D4F1D30CB8E5E /* PrivacyInfo.xcprivacy in Resources */,
+				D1CC6E742EC39D73006DA163 /* fun-on-the-farm-377651.mp3 in Resources */,
+				D1CC6E702EC39D5A006DA163 /* open-new-level-143027.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,9 +215,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ForPlayFlowCrackTheClue/Pods-ForPlayFlowCrackTheClue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ForPlayFlowCrackTheClue/Pods-ForPlayFlowCrackTheClue-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,9 +258,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ForPlayFlowCrackTheClue/Pods-ForPlayFlowCrackTheClue-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ForPlayFlowCrackTheClue/Pods-ForPlayFlowCrackTheClue-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -273,7 +305,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ForPlayFlowCrackTheClue;
 				PRODUCT_NAME = ForPlayFlowCrackTheClue;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -300,7 +332,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ForPlayFlowCrackTheClue;
 				PRODUCT_NAME = ForPlayFlowCrackTheClue;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -376,10 +408,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -448,10 +477,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

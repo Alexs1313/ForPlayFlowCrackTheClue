@@ -1,28 +1,25 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { NavigationContainer } from '@react-navigation/native';
+import { useEffect, useState } from 'react';
+import ForPlayFlowLoader from './ForPlayFlowCrackTheClue/ForPlayFlowComponents/ForPlayFlowLoader';
+import ForPlayFlowStack from './ForPlayFlowCrackTheClue/ForPlayFlowNavigation/ForPlayFlowStack';
+import { ContextProvider } from './ForPlayFlowCrackTheClue/ForPlayFlowStore/forPlayFlowContext';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+  }, []);
 
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+    <NavigationContainer>
+      <ContextProvider>
+        {isLoading ? <ForPlayFlowLoader /> : <ForPlayFlowStack />}
+      </ContextProvider>
+    </NavigationContainer>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+};
 
 export default App;

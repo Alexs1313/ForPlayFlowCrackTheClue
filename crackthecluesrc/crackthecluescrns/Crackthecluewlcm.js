@@ -9,14 +9,15 @@ import {
 
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import ForPlayFlowBackground from '../ForPlayFlowComponents/ForPlayFlowBackground';
+import ForPlayFlowBackground from '../crackthecluecmpnts/Crackthecluebckgrnd';
+import Crackthecluebckgrnd from '../crackthecluecmpnts/Crackthecluebckgrnd';
 
-const ForPlayFlowOnboarding = () => {
+const Crackthecluewlcm = () => {
   const [forPlayFlowIndex, setForPlayFlowIndex] = useState(0);
   const navigation = useNavigation();
 
   return (
-    <ForPlayFlowBackground>
+    <Crackthecluebckgrnd>
       <View style={styles.icefishcontainer}>
         {forPlayFlowIndex === 0 && (
           <Image
@@ -71,7 +72,7 @@ const ForPlayFlowOnboarding = () => {
             if (forPlayFlowIndex < 3) {
               setForPlayFlowIndex(forPlayFlowIndex + 1);
             } else {
-              navigation.replace('ForPlayFlowHome');
+              navigation.replace('Crackthecluemnscr');
             }
           }}
         >
@@ -85,7 +86,7 @@ const ForPlayFlowOnboarding = () => {
           </ImageBackground>
         </TouchableOpacity>
       </View>
-    </ForPlayFlowBackground>
+    </Crackthecluebckgrnd>
   );
 };
 
@@ -138,4 +139,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ForPlayFlowOnboarding;
+export default Crackthecluewlcm;

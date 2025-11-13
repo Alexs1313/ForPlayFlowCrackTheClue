@@ -5,7 +5,7 @@ export const StoreContext = createContext(undefined);
 
 export const useStore = () => useContext(StoreContext);
 
-export const ContextProvider = ({ children }) => {
+export const SoundContextProvider = ({ children }) => {
   const [toggleForPlayFlowVibration, setToggleForPlayFlowVibration] =
     useState(false);
   const [toggleForPlayFlowSound, setToggleForPlayFlowSound] = useState(false);

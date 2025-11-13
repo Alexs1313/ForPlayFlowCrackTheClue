@@ -1,6 +1,6 @@
 import { ImageBackground, ScrollView } from 'react-native';
 
-const ForPlayFlowBackground = ({ children }) => {
+const Crackthecluebckgrnd = ({ children }) => {
   return (
     <ImageBackground
       source={require('../../assets/images/forplayflowbg.png')}
@@ -16,4 +16,4 @@ const ForPlayFlowBackground = ({ children }) => {
   );
 };
 
-export default ForPlayFlowBackground;
+export default Crackthecluebckgrnd;

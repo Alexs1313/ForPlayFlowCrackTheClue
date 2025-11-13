@@ -12,11 +12,12 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import ForPlayFlowBackground from '../ForPlayFlowComponents/ForPlayFlowBackground';
-import { useStore } from '../ForPlayFlowStore/forPlayFlowContext';
+import ForPlayFlowBackground from '../crackthecluecmpnts/Crackthecluebckgrnd';
+import { useStore } from '../crackthecluestrg/Crackthecluecntxt';
 import { BlurView } from '@react-native-community/blur';
+import Crackthecluebckgrnd from '../crackthecluecmpnts/Crackthecluebckgrnd';
 
-const ForPlayFlowHome = () => {
+const Crackthecluemnscr = () => {
   const navigation = useNavigation();
   const {
     toggleForPlayFlowVibration,
@@ -132,11 +133,11 @@ const ForPlayFlowHome = () => {
 
   const forPlayFlowHandleLevelPress = id => {
     if (!forPlayFlowIsUnlocked(id)) return;
-    navigation.navigate('ForPlayFlowGame', { level: id });
+    navigation.navigate('Crackthecluegmpl', { level: id });
   };
 
   return (
-    <ForPlayFlowBackground>
+    <Crackthecluebckgrnd>
       <View style={styles.forPlayFlowContainer}>
         <ImageBackground
           source={require('../../assets/images/forplayflowhomebrd.png')}
@@ -375,7 +376,7 @@ const ForPlayFlowHome = () => {
           </View>
         </View>
       </Modal>
-    </ForPlayFlowBackground>
+    </Crackthecluebckgrnd>
   );
 };
 
@@ -509,4 +510,4 @@ const styles = StyleSheet.create({
   forPlayFlowCloseBtn: { position: 'absolute', top: -20, right: 0 },
 });
 
-export default ForPlayFlowHome;
+export default Crackthecluemnscr;

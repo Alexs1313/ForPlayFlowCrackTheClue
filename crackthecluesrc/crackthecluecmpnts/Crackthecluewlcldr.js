@@ -2,9 +2,9 @@ import React from 'react';
 import { WebView } from 'react-native-webview';
 import { View, Image, StyleSheet } from 'react-native';
 
-import ForPlayFlowBackground from './ForPlayFlowBackground';
+import ForPlayFlowBackground from './Crackthecluebckgrnd';
 
-const ForPlayFlowLoader = () => {
+const Crackthecluewlcldr = () => {
   const welcomeForPlayFlowLoader = `
      <html>
       <head>
@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ForPlayFlowLoader;
+export default Crackthecluewlcldr;

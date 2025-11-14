@@ -12,10 +12,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import ForPlayFlowBackground from '../crackthecluecmpnts/Crackthecluebckgrnd';
-import { useStore } from '../crackthecluestrg/Crackthecluecntxt';
+import ForPlayFlowBackground from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
+import { useStore } from '../ForPlayFlowCrackTheClueSTR/Crackthecluecntxt';
 import { BlurView } from '@react-native-community/blur';
-import Crackthecluebckgrnd from '../crackthecluecmpnts/Crackthecluebckgrnd';
+import Crackthecluebckgrnd from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
 
 const Crackthecluemnscr = () => {
   const navigation = useNavigation();

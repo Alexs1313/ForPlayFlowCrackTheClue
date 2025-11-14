@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { BlurView } from '@react-native-community/blur';
-import { useStore } from '../crackthecluestrg/Crackthecluecntxt';
+import { useStore } from '../ForPlayFlowCrackTheClueSTR/Crackthecluecntxt';
 import {
   View,
   Text,
@@ -17,8 +17,8 @@ import {
 import {
   forPlayFlowGameLevels,
   forPlayFlowLevelIntros,
-} from '../crackthecluedta/forPlayFlowGameData';
-import Crackthecluebckgrnd from '../crackthecluecmpnts/Crackthecluebckgrnd';
+} from '../ForPlayFlowCrackTheClueDT/forPlayFlowGameData';
+import Crackthecluebckgrnd from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
 
 const Crackthecluegmpl = () => {
   const navigation = useNavigation();

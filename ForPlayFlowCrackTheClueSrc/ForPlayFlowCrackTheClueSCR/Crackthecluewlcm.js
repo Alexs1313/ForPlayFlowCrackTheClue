@@ -9,8 +9,8 @@ import {
 
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import ForPlayFlowBackground from '../crackthecluecmpnts/Crackthecluebckgrnd';
-import Crackthecluebckgrnd from '../crackthecluecmpnts/Crackthecluebckgrnd';
+import ForPlayFlowBackground from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
+import Crackthecluebckgrnd from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
 
 const Crackthecluewlcm = () => {
   const [forPlayFlowIndex, setForPlayFlowIndex] = useState(0);

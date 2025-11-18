@@ -1,6 +1,6 @@
 import React from 'react';
 import { WebView } from 'react-native-webview';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, Platform } from 'react-native';
 
 import ForPlayFlowBackground from './Crackthecluebckgrnd';
 
@@ -39,13 +39,22 @@ const Crackthecluewlcldr = () => {
 
   return (
     <ForPlayFlowBackground>
-      <View style={styles.loadercnt}>
-        <Image
-          source={require('../../assets/images/forplayflowldr.png')}
-          style={{ marginBottom: 30 }}
-        />
-        <Image source={require('../../assets/images/forplayflowldr2.png')} />
-      </View>
+      {Platform.OS === 'ios' ? (
+        <View style={styles.loadercnt}>
+          <Image
+            source={require('../../assets/images/forplayflowldr.png')}
+            style={{ marginBottom: 30 }}
+          />
+          <Image source={require('../../assets/images/forplayflowldr2.png')} />
+        </View>
+      ) : (
+        <View style={styles.loadercnt}>
+          <Image
+            source={require('../../assets/images/icon.png')}
+            style={{ width: 350, height: 350, borderRadius: 12 }}
+          />
+        </View>
+      )}
 
       <View style={styles.loaderwrap}>
         <WebView

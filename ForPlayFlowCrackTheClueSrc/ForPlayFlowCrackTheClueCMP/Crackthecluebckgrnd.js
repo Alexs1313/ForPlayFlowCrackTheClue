@@ -1,9 +1,13 @@
-import { ImageBackground, ScrollView } from 'react-native';
+import { ImageBackground, Platform, ScrollView } from 'react-native';
 
 const Crackthecluebckgrnd = ({ children }) => {
   return (
     <ImageBackground
-      source={require('../../assets/images/forplayflowbg.png')}
+      source={
+        Platform.OS === 'ios'
+          ? require('../../assets/images/forplayflowbg.png')
+          : require('../../assets/images/andrbg.png')
+      }
       style={{ flex: 1 }}
     >
       <ScrollView

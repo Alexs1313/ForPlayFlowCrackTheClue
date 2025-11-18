@@ -9,7 +9,6 @@ import {
 
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import ForPlayFlowBackground from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
 import Crackthecluebckgrnd from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
 
 const Crackthecluewlcm = () => {
@@ -45,16 +44,16 @@ const Crackthecluewlcm = () => {
         )}
         <ImageBackground
           source={require('../../assets/images/forplayflowboard.png')}
-          style={styles.icefishwelcomeboard}
+          style={styles.welcomeboard}
         >
-          <Text style={styles.icefishwelcometext}>
+          <Text style={styles.welcometext}>
             {forPlayFlowIndex === 0 &&
               'Welcome to For Play Flow – Crack the Clue'}
             {forPlayFlowIndex === 1 && 'How It Works'}
             {forPlayFlowIndex === 2 && 'Progress Through Levels'}
             {forPlayFlowIndex === 3 && 'Stay Focused'}
           </Text>
-          <Text style={styles.icefishwelcomesubtitle}>
+          <Text style={styles.welcomesubtitle}>
             {forPlayFlowIndex === 0 &&
               'A playful logic game where every clue hides a twist. Read carefully, think twice, and find where the real chick is waiting.'}
             {forPlayFlowIndex === 1 &&
@@ -96,7 +95,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     flex: 1,
   },
-  icefishwelcomeboard: {
+  welcomeboard: {
     width: 354,
     height: 261,
     justifyContent: 'center',
@@ -110,20 +109,20 @@ const styles = StyleSheet.create({
     top: 20,
     zIndex: 2,
   },
-  icefishwelcometext: {
-    fontSize: 22,
+  welcometext: {
+    fontSize: 20,
     color: '#fff',
     fontWeight: 'bold',
     textAlign: 'center',
     paddingHorizontal: 20,
   },
-  icefishwelcomesubtitle: {
-    fontSize: 20,
+  welcomesubtitle: {
+    fontSize: 18,
     color: '#fff',
     textAlign: 'center',
     fontWeight: '400',
-    marginTop: 20,
-    marginHorizontal: 30,
+    marginTop: 10,
+    marginHorizontal: 20,
     fontStyle: 'italic',
   },
   forplayflowbtn: {

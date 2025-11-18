@@ -180,19 +180,26 @@ const Crackthecluegmpl = () => {
       <View style={styles.forplayflowcontainer}>
         {introVisible && !gameOver && (
           <>
-            <ImageBackground
-              source={require('../../assets/images/forplayflowhomebrd.png')}
-              style={styles.forplayflowboard}
-            >
+            {Platform.OS === 'ios' ? (
+              <ImageBackground
+                source={require('../../assets/images/forplayflowhomebrd.png')}
+                style={styles.forPlayFlowBoard}
+              >
+                <Image
+                  source={require('../../assets/images/forplayflowhomelogo.png')}
+                  style={styles.forPlayFlowImage}
+                />
+              </ImageBackground>
+            ) : (
               <Image
-                source={require('../../assets/images/forplayflowhomelogo.png')}
-                style={styles.forplayflowwimage}
+                source={require('../../assets/images/icon.png')}
+                style={{ width: 250, height: 250, borderRadius: 12 }}
               />
-            </ImageBackground>
+            )}
 
             <ImageBackground
               source={require('../../assets/images/forplayflowboard.png')}
-              style={styles.forplayflowtextBoard}
+              style={[styles.forplayflowtextBoard, { marginTop: 80 }]}
             >
               <Text style={styles.forplayflowdesc}>
                 {forPlayFlowLevelIntros[level]}
@@ -364,7 +371,7 @@ const Crackthecluegmpl = () => {
                 activeOpacity={0.6}
                 style={[styles.icefishnextbtn, { marginBottom: 10 }]}
                 onPress={() =>
-                  navigation.replace('ForPlayFlowGame', {
+                  navigation.replace('Crackthecluegmpl', {
                     level: level + 1,
                     skipIntro: true,
                   })

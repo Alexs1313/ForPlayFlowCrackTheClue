@@ -139,15 +139,22 @@ const Crackthecluemnscr = () => {
   return (
     <Crackthecluebckgrnd>
       <View style={styles.forPlayFlowContainer}>
-        <ImageBackground
-          source={require('../../assets/images/forplayflowhomebrd.png')}
-          style={styles.forPlayFlowBoard}
-        >
+        {Platform.OS === 'ios' ? (
+          <ImageBackground
+            source={require('../../assets/images/forplayflowhomebrd.png')}
+            style={styles.forPlayFlowBoard}
+          >
+            <Image
+              source={require('../../assets/images/forplayflowhomelogo.png')}
+              style={styles.forPlayFlowImage}
+            />
+          </ImageBackground>
+        ) : (
           <Image
-            source={require('../../assets/images/forplayflowhomelogo.png')}
-            style={styles.forPlayFlowImage}
+            source={require('../../assets/images/icon.png')}
+            style={{ width: 250, height: 250, borderRadius: 12 }}
           />
-        </ImageBackground>
+        )}
 
         <View style={styles.forPlayFlowLevelsContainer}>
           {forPlayFlowLevels.map(level => {
@@ -215,30 +222,34 @@ const Crackthecluemnscr = () => {
         </View>
 
         <View style={styles.forPlayFlowBottomBtns}>
-          <TouchableOpacity
-            activeOpacity={0.6}
-            onPress={() => forPlayFlowToggleMusic(!toggleForPlayFlowSound)}
-          >
-            <Image
-              source={
-                toggleForPlayFlowSound
-                  ? require('../../assets/images/forplayflowmuson.png')
-                  : require('../../assets/images/forplayflowmusoff.png')
-              }
-            />
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            activeOpacity={0.6}
-            onPress={() =>
-              Linking.openURL(
-                'https://apps.apple.com/us/app/for-play-flow-crack-the-clue/id6755185619',
-              )
-            }
-          >
-            <Image source={require('../../assets/images/forplayflowshr.png')} />
-          </TouchableOpacity>
-
+          {Platform.OS === 'ios' && (
+            <>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => forPlayFlowToggleMusic(!toggleForPlayFlowSound)}
+              >
+                <Image
+                  source={
+                    toggleForPlayFlowSound
+                      ? require('../../assets/images/forplayflowmuson.png')
+                      : require('../../assets/images/forplayflowmusoff.png')
+                  }
+                />
+              </TouchableOpacity>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() =>
+                  Linking.openURL(
+                    'https://apps.apple.com/us/app/for-play-flow-crack-the-clue/id6755185619',
+                  )
+                }
+              >
+                <Image
+                  source={require('../../assets/images/forplayflowshr.png')}
+                />
+              </TouchableOpacity>
+            </>
+          )}
           <TouchableOpacity
             activeOpacity={0.6}
             onPress={() =>
@@ -453,21 +464,21 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     color: '#fff',
-    marginBottom: 30,
+    marginBottom: 17,
   },
   forPlayFlowModalText: {
-    fontSize: 18,
+    fontSize: 16,
     color: '#fff',
-    marginBottom: 15,
+    marginBottom: 3,
     textAlign: 'center',
-    paddingHorizontal: 20,
+    paddingHorizontal: 14,
     lineHeight: 22,
   },
   forPlayFlowModalQuant: {
     fontSize: 32,
     fontWeight: 'bold',
     color: '#fff',
-    marginBottom: 30,
+    marginBottom: 20,
   },
   forPlayFlowBoard: {
     width: 366,

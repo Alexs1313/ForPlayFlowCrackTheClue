@@ -16,7 +16,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <SoundContextProvider>
-        {isLoading ? <Crackthecluewlcldr /> : <Crackthecluestck />}
+        {isLoading ? <Crackthecluewlcld /> : <Crackthecluestck />}
       </SoundContextProvider>
     </NavigationContainer>
   );

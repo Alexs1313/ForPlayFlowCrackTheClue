@@ -1,19 +1,19 @@
 workflows:
   ios-workflow:
-    name: For Play Flow – Crack the Clue
+    name: 'Crack the Clue: 4 Fowl'
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: ForPlayFlowNewAPIKey
+      app_store_connect: CrackTheClueForFowlAPIKey
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.ForPlayFlowNew
+        bundle_identifier: com.CrackTheClueForFowl
       vars:
-        BUNDLE_ID: com.ForPlayFlowNew
+        BUNDLE_ID: com.CrackTheClueForFowl
         XCODE_WORKSPACE: ForPlayFlowCrackTheClue.xcworkspace
         XCODE_SCHEME: ForPlayFlowCrackTheClue
-        APP_STORE_APPLE_ID: 6755638295
+        APP_STORE_APPLE_ID: 6756071860
     scripts:
       - name: Install npm dependencies
         script: |
@@ -44,4 +44,4 @@ workflows:
       app_store_connect:
         auth: integration
         submit_to_app_store: true
-        copyright: For Play Flow – Crack the Clue 2025
+        copyright: 'Crack the Clue: 4 Fowl 2025'

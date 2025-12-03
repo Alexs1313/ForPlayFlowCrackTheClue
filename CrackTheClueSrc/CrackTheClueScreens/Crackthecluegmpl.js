@@ -71,10 +71,6 @@ const Crackthecluegmpl = () => {
     const newEggs = [...eggStates];
 
     if (correct) {
-      await updateForPlayFlowScore();
-    }
-
-    if (correct) {
       setTotalScore(prev => prev + 1);
       if (toggleForPlayFlowSound) {
         forPlayWinClick?.();
@@ -90,6 +86,11 @@ const Crackthecluegmpl = () => {
 
         setWin(true);
         setGameOver(true);
+
+        const saved = await AsyncStorage.getItem(FORPLAYFLOW_SCORE);
+        const current = saved ? parseInt(saved) : 0;
+        const newTotal = current + totalScore + 1; // +1 за последний правильный
+        await AsyncStorage.setItem(FORPLAYFLOW_SCORE, String(newTotal));
 
         const stored = await AsyncStorage.getItem(
           'forplayflow_completed_levels',

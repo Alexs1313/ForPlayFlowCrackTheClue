@@ -251,7 +251,7 @@ const Crackthecluemnscr = () => {
                 activeOpacity={0.6}
                 onPress={() =>
                   Linking.openURL(
-                    'https://apps.apple.com/us/app/for-play-flow-crack-the-clue/id6755185619',
+                    'https://apps.apple.com/us/app/crack-the-clue-4-fowl/id6756071860',
                   )
                 }
               >

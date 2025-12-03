@@ -9,7 +9,7 @@ import {
 
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import Crackthecluebckgrnd from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
+import Crackthecluebckgrnd from '../CrackTheClueComponents/Crackthecluebckgrnd';
 
 const Crackthecluewlcm = () => {
   const [forPlayFlowIndex, setForPlayFlowIndex] = useState(0);

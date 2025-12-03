@@ -1,8 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
-import { SoundContextProvider } from './ForPlayFlowCrackTheClueSrc/ForPlayFlowCrackTheClueSTR/Crackthecluecntxt';
-import Crackthecluestck from './ForPlayFlowCrackTheClueSrc/ForPlayFlowCrackTheClueNV/Crackthecluestck';
-import Crackthecluewlcldr from './ForPlayFlowCrackTheClueSrc/ForPlayFlowCrackTheClueCMP/Crackthecluewlcldr';
+import { SoundContextProvider } from './CrackTheClueSrc/CrackTheClueStore/Crackthecluecntxt';
+import Crackthecluestck from './CrackTheClueSrc/CrackTheClueNavigation/Crackthecluestck';
+import Crackthecluewlcldr from './CrackTheClueSrc/CrackTheClueComponents/Crackthecluewlcldr';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <SoundContextProvider>
-        {isLoading ? <Crackthecluewlcld /> : <Crackthecluestck />}
+        {isLoading ? <Crackthecluewlcldr /> : <Crackthecluestck />}
       </SoundContextProvider>
     </NavigationContainer>
   );

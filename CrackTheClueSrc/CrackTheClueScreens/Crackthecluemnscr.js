@@ -12,10 +12,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import ForPlayFlowBackground from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
-import { useStore } from '../ForPlayFlowCrackTheClueSTR/Crackthecluecntxt';
+import ForPlayFlowBackground from '../CrackTheClueComponents/Crackthecluebckgrnd';
+import { useStore } from '../CrackTheClueStore/Crackthecluecntxt';
 import { BlurView } from '@react-native-community/blur';
-import Crackthecluebckgrnd from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
+import Crackthecluebckgrnd from '../CrackTheClueComponents/Crackthecluebckgrnd';
 
 const Crackthecluemnscr = () => {
   const navigation = useNavigation();
@@ -199,6 +199,17 @@ const Crackthecluemnscr = () => {
         <View style={styles.forPlayFlowNavContainer}>
           <TouchableOpacity
             activeOpacity={0.8}
+            onPress={() => navigation.navigate('Cracktheclueswp')}
+          >
+            <ImageBackground
+              source={require('../../assets/images/forplayflowhomebtn.png')}
+              style={styles.forPlayFlowNavBtn}
+            >
+              <Text style={styles.forPlayFlowNavText}>Egg Swap Station</Text>
+            </ImageBackground>
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.8}
             onPress={() => setForPlayFlowShowRulesModal(true)}
           >
             <ImageBackground
@@ -327,15 +338,18 @@ const Crackthecluemnscr = () => {
             </TouchableOpacity>
             <Text style={styles.forPlayFlowModalTitle}>Game Rules</Text>
             <Text style={styles.forPlayFlowModalText}>
-              Welcome to For Play Flow – Crack the Clue! Your goal is to find
-              which egg hides the chick. Each round gives you one short clue.
-              Read it carefully and tap the egg you think is correct. If you’re
-              right, the chick appears and you move to the next puzzle. If not,
-              you’ll see something else — and need to start that level again.
-              There are 4 stages, each with 5 puzzles. Each new stage adds more
-              funny farm characters and trickier clues. Finish all 5 puzzles to
-              unlock the next stage. Stay sharp, read between the lines, and
-              trust your logic — not luck!
+              Your goal is to find which egg hides the chick. Each round gives
+              you one short clue. Read it carefully and tap the egg you think is
+              correct. If you’re right, the chick appears and you move to the
+              next puzzle. If not, you’ll see something else — and need to start
+              that level again. There are 4 stages, each with 5 puzzles. Each
+              new stage adds more funny farm characters and trickier clues.
+              Finish all 5 puzzles to unlock the next stage. Stay sharp, read
+              between the lines, and trust your logic — not luck! Every correct
+              chick you find earns you 1 egg, and completing a full stage gives
+              you a bonus egg. You can spend your eggs in the Egg Swap Station,
+              where you trade them for new background illustrations to customize
+              how the experience looks while you play.
             </Text>
           </ImageBackground>
         </View>
@@ -486,7 +500,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  forPlayFlowImage: { top: -10 },
+  forPlayFlowImage: { top: -23 },
   forPlayFlowLevelsContainer: {
     marginTop: 30,
     gap: 10,
@@ -515,8 +529,14 @@ const styles = StyleSheet.create({
     height: 55,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingHorizontal: 10,
   },
-  forPlayFlowNavText: { color: '#fff', fontSize: 18, fontWeight: 'bold' },
+  forPlayFlowNavText: {
+    color: '#fff',
+    fontSize: 17,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
   forPlayFlowNavContainer: { alignItems: 'center', marginTop: 10, gap: 10 },
   forPlayFlowCloseBtn: { position: 'absolute', top: -20, right: 0 },
 });

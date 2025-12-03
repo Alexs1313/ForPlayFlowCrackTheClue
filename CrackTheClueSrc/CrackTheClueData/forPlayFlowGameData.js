@@ -74,3 +74,26 @@ export const forPlayFlowLevelObjects = {
   3: ['fox', 'rooster', 'money'],
   4: ['fox', 'rooster', 'money', 'corn'],
 };
+
+export const forPlayFlowBackgroundsList = [
+  {
+    id: 1,
+    price: 0,
+    image: require('../../assets/images/forplayflowbg.png'),
+  },
+  {
+    id: 2,
+    price: 20,
+    image: require('../../assets/images/forplayflowbg2.png'),
+  },
+  {
+    id: 3,
+    price: 30,
+    image: require('../../assets/images/forplayflowb3.png'),
+  },
+  {
+    id: 4,
+    price: 40,
+    image: require('../../assets/images/forplayflowb4.png'),
+  },
+];

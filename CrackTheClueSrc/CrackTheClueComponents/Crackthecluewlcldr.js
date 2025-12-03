@@ -42,10 +42,9 @@ const Crackthecluewlcldr = () => {
       {Platform.OS === 'ios' ? (
         <View style={styles.loadercnt}>
           <Image
-            source={require('../../assets/images/forplayflowldr.png')}
+            source={require('../../assets/images/forplayflowldrintro.png')}
             style={{ marginBottom: 30 }}
           />
-          <Image source={require('../../assets/images/forplayflowldr2.png')} />
         </View>
       ) : (
         <View style={styles.loadercnt}>

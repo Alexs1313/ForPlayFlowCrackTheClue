@@ -1,7 +1,8 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import Crackthecluegmpl from '../ForPlayFlowCrackTheClueSCR/Crackthecluegmpl';
-import Crackthecluemnscr from '../ForPlayFlowCrackTheClueSCR/Crackthecluemnscr';
-import Crackthecluewlcm from '../ForPlayFlowCrackTheClueSCR/Crackthecluewlcm';
+import Crackthecluegmpl from '../CrackTheClueScreens/Crackthecluegmpl';
+import Crackthecluemnscr from '../CrackTheClueScreens/Crackthecluemnscr';
+import Crackthecluewlcm from '../CrackTheClueScreens/Crackthecluewlcm';
+import Cracktheclueswp from '../CrackTheClueScreens/Cracktheclueswp';
 
 const Stack = createStackNavigator();
 
@@ -11,6 +12,7 @@ const Crackthecluestck = () => {
       <Stack.Screen name="Crackthecluewlcm" component={Crackthecluewlcm} />
       <Stack.Screen name="Crackthecluemnscr" component={Crackthecluemnscr} />
       <Stack.Screen name="Crackthecluegmpl" component={Crackthecluegmpl} />
+      <Stack.Screen name="Cracktheclueswp" component={Cracktheclueswp} />
     </Stack.Navigator>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { BlurView } from '@react-native-community/blur';
-import { useStore } from '../ForPlayFlowCrackTheClueSTR/Crackthecluecntxt';
+import { useStore } from '../CrackTheClueStore/Crackthecluecntxt';
 import {
   View,
   Text,
@@ -17,8 +17,10 @@ import {
 import {
   forPlayFlowGameLevels,
   forPlayFlowLevelIntros,
-} from '../ForPlayFlowCrackTheClueDT/forPlayFlowGameData';
-import Crackthecluebckgrnd from '../ForPlayFlowCrackTheClueCMP/Crackthecluebckgrnd';
+} from '../CrackTheClueData/forPlayFlowGameData';
+import Crackthecluebckgrnd from '../CrackTheClueComponents/Crackthecluebckgrnd';
+
+const FORPLAYFLOW_SCORE = 'forplayflow_total_score';
 
 const Crackthecluegmpl = () => {
   const navigation = useNavigation();
@@ -31,6 +33,7 @@ const Crackthecluegmpl = () => {
   const [gameOver, setGameOver] = useState(false);
   const [win, setWin] = useState(false);
   const [eggStates, setEggStates] = useState([]);
+  const [totalScore, setTotalScore] = useState(0);
   const [resultObject, setResultObject] = useState(null);
   const [showExitModal, setShowExitModal] = useState(false);
   const [showWinConfetti, setShowWinConfetti] = useState(false);
@@ -68,6 +71,11 @@ const Crackthecluegmpl = () => {
     const newEggs = [...eggStates];
 
     if (correct) {
+      await updateForPlayFlowScore();
+    }
+
+    if (correct) {
+      setTotalScore(prev => prev + 1);
       if (toggleForPlayFlowSound) {
         forPlayWinClick?.();
       }
@@ -175,6 +183,16 @@ const Crackthecluegmpl = () => {
     }
   };
 
+  const updateForPlayFlowScore = async () => {
+    try {
+      const saved = await AsyncStorage.getItem(FORPLAYFLOW_SCORE);
+      const current = saved ? parseInt(saved) : 0;
+      await AsyncStorage.setItem(FORPLAYFLOW_SCORE, String(current + 1));
+    } catch (e) {
+      console.log('Score update error', e);
+    }
+  };
+
   return (
     <Crackthecluebckgrnd>
       <View style={styles.forplayflowcontainer}>
@@ -202,7 +220,11 @@ const Crackthecluegmpl = () => {
               style={[styles.forplayflowtextBoard, { marginTop: 80 }]}
             >
               <Text style={styles.forplayflowdesc}>
-                {forPlayFlowLevelIntros[level]}
+                The farm is waking up, and one mischievous little chick is
+                hiding again. You’ll see several eggs and get one short clue —
+                use it to figure out where the real chick is hiding. Pick
+                wisely, collect eggs for correct answers, and unlock new
+                backgrounds as you play. Ready to outsmart a tiny troublemaker?
               </Text>
             </ImageBackground>
 
@@ -239,6 +261,22 @@ const Crackthecluegmpl = () => {
 
         {!introVisible && !gameOver && (
           <>
+            <View
+              style={{
+                alignSelf: 'flex-end',
+                marginRight: 25,
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: 10,
+                top: 25,
+              }}
+            >
+              <Image
+                source={require('../../assets/images/forplayflowegggame.png')}
+              />
+              <Text style={styles.scoreText}>X {totalScore}</Text>
+            </View>
+
             <Image
               source={require('../../assets/images/forplayflowrooster.png')}
             />
@@ -476,6 +514,13 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     paddingBottom: 50,
   },
+  forPlayFlowBoard: {
+    width: 320,
+    height: 111,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  forPlayFlowImage: { top: -23 },
   forplayflowbtn: {
     width: 150,
     height: 57,
@@ -518,6 +563,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     gap: 30,
     marginTop: 5,
+  },
+  scoreText: {
+    color: '#fff',
+    fontSize: 22,
+    fontWeight: 'bold',
   },
   forplaymodalIcon: {
     width: 64,
@@ -581,7 +631,7 @@ const styles = StyleSheet.create({
   },
   forplayflowdesc: {
     color: '#fff',
-    fontSize: 22,
+    fontSize: 16,
     textAlign: 'center',
     lineHeight: 23,
     fontWeight: '500',
